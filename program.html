@@ -1,0 +1,832 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SSX 2026 Program Schedule</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111318",
+              "surface-dark": "#1c1f27",
+              "border-dark": "#282e39",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .bg-grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.03;
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBxIck8-0Kye11kY-ww3O1eUL4m6yaYdif3eKFMqkat56iz8QFeHgwktl2q3ct5iLHN-WKIIONrOQ4ouw_1DAGMpaSWVYVr_tN3fvPKG3DxyqXDN4YYhS6rM3xZD3L_V6DxF6w9dblFW7vTzxmJMW8B97esx5ErU3qUKJl2dIIbJrdxIIJppXXbOylbVDZ3bHQbQ04q9ILuxyB3Va-3Xkm1GCSUe8GT1F8LE_qEO7fAqYwB1JYVHud3q7Z87E0QMvgN-GOQaTrKr-Wg);
+      }
+      .blueprint-bg {
+        position: absolute;
+        z-index: 0;
+        opacity: 0.02;
+        pointer-events: none;
+      }
+      .brutalist-grid {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, rgba(40, 46, 57, 0.2) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(40, 46, 57, 0.2) 1px, transparent 1px);
+      }
+      .schedule-item {
+        transition: opacity 0.3s ease;
+      }
+      .schedule-item.hidden {
+        display: none;
+      }
+      .day-button {
+        cursor: pointer;
+      }
+      .day-button.active {
+        background-color: rgba(28, 31, 39, 0.8) !important;
+      }
+      .day-button.active .day-indicator {
+        background-color: #135bec !important;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary selection:text-white"
+  >
+    <div class="bg-grain"></div>
+    <svg
+      class="blueprint-bg top-0 right-0 w-[600px] h-[600px] text-primary hidden lg:block"
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,32.3C59,43.1,47.1,51.8,35.3,58.8C23.5,65.8,11.8,71.1,-1.2,73.2C-14.2,75.3,-28.3,74.2,-41.2,68.1C-54.1,62,-65.8,50.9,-75.1,37.6C-84.4,24.3,-91.3,8.8,-88.7,-5.2C-86.1,-19.2,-74,-31.7,-61.8,-41.6C-49.6,-51.5,-37.3,-58.8,-24.8,-67.2C-12.3,-75.6,0.4,-85.1,14.2,-87.3C28,-89.5,41.9,-84.4,44.7,-76.4Z"
+        fill="currentColor"
+        transform="translate(100 100)"
+      ></path>
+    </svg>
+    <svg
+      class="blueprint-bg bottom-0 left-0 w-[500px] h-[500px] text-primary rotate-180"
+      style="opacity: 0.015"
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20,100 L50,50 L80,100 L110,50 L140,100 L170,50"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="0.5"
+      ></path>
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="5"
+        stroke="currentColor"
+        stroke-width="0.5"
+      ></circle>
+      <circle
+        cx="110"
+        cy="50"
+        fill="none"
+        r="5"
+        stroke="currentColor"
+        stroke-width="0.5"
+      ></circle>
+      <rect
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-width="0.5"
+        width="20"
+        x="70"
+        y="90"
+      ></rect>
+    </svg>
+    <header
+      class="relative z-10 w-full border-b border-border-dark bg-background-dark"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-2xl"
+            >biotech</span
+          >
+          <span class="font-bold tracking-tight text-sm uppercase font-mono"
+            >SSX Conf.</span
+          >
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+          <a
+            class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >Speakers</a
+          >
+          <a
+            class="text-sm font-medium text-white border-b-2 border-primary pb-0.5"
+            href="#"
+            >Schedule</a
+          >
+          <a
+            class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >Workshops</a
+          >
+          <a
+            class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >Travel</a
+          >
+        </nav>
+        <button
+          class="hidden md:flex items-center gap-2 px-5 py-2 bg-primary hover:bg-blue-600 text-white text-sm font-bold tracking-wide rounded transition-colors group"
+        >
+          <span>REGISTER</span>
+          <span
+            class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform"
+            >arrow_forward</span
+          >
+        </button>
+        <button class="md:hidden text-white">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+    <main
+      class="relative z-10 flex-1 w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row"
+    >
+      <aside
+        class="w-full lg:w-64 lg:border-r border-border-dark bg-background-dark/50 lg:sticky lg:top-[73px] lg:h-[calc(100vh-73px)] shrink-0 flex flex-col"
+      >
+        <div class="p-6 border-b border-border-dark">
+          <h2
+            class="text-4xl font-light tracking-tighter text-white leading-none mb-1"
+          >
+            PROGRAM
+          </h2>
+          <h2
+            class="text-4xl font-bold tracking-tighter text-primary leading-none"
+          >
+            SCHEDULE
+          </h2>
+          <p
+            class="mt-4 text-xs text-slate-500 font-mono uppercase tracking-widest border-l-2 border-primary pl-3"
+          >
+            Est. Time Zone: GMT+5:30<br />
+            Loc: Bengaluru, IN
+          </p>
+        </div>
+        <div
+          class="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible"
+        >
+          <button
+            class="day-button flex-1 lg:flex-none p-6 border-b border-border-dark border-r lg:border-r-0 border-r-border-dark group hover:bg-surface-dark transition-colors relative"
+            data-day="1"
+            onclick="filterScheduleByDay(1)"
+          >
+            <div class="day-indicator absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-slate-700 transition-colors"></div>
+            <span class="block text-xs font-mono text-slate-500 mb-1"
+              >20 FEB</span
+            >
+            <span
+              class="block text-2xl font-bold text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-transform"
+              >DAY 01</span
+            >
+            <span class="block text-xs text-slate-500 mt-1"
+              >ADME & Drug Discovery</span
+            >
+          </button>
+          <button
+            class="day-button flex-1 lg:flex-none p-6 border-b border-border-dark border-r lg:border-r-0 border-r-border-dark group hover:bg-surface-dark transition-colors relative"
+            data-day="2"
+            onclick="filterScheduleByDay(2)"
+          >
+            <div
+              class="day-indicator absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-slate-700 transition-colors"
+            ></div>
+            <span class="block text-xs font-mono text-slate-500 mb-1"
+              >21 FEB</span
+            >
+            <span
+              class="block text-2xl font-bold text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-transform"
+              >DAY 02</span
+            >
+            <span class="block text-xs text-slate-500 mt-1"
+              >Tech & Therapeutics</span
+            >
+          </button>
+          <button
+            class="day-button flex-1 lg:flex-none p-6 border-b border-border-dark group hover:bg-surface-dark transition-colors relative"
+            data-day="3"
+            onclick="filterScheduleByDay(3)"
+          >
+            <div
+              class="day-indicator absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-slate-700 transition-colors"
+            ></div>
+            <span class="block text-xs font-mono text-slate-500 mb-1"
+              >22 FEB</span
+            >
+            <span
+              class="block text-2xl font-bold text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-transform"
+              >DAY 03</span
+            >
+            <span class="block text-xs text-slate-500 mt-1">Pharmacology & Case Studies</span>
+          </button>
+        </div>
+        <div class="mt-auto p-6 hidden lg:block">
+          <button
+            class="w-full py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-all text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 group"
+          >
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            Download PDF
+          </button>
+        </div>
+      </aside>
+      <section class="flex-1 brutalist-grid min-h-screen pb-20">
+        <!-- 07:30 - 08:45 Registration and Breakfast -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">07:30</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Registration</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Registration and Breakfast</h3>
+            <p class="text-slate-400">07:30 - 08:45</p>
+          </div>
+        </div>
+
+        <!-- 08:45 - 09:15 Inauguration -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">08:45</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">Opening</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Inauguration</h3>
+            <p class="text-slate-400">08:45 - 09:15</p>
+          </div>
+        </div>
+
+        <!-- 09:15 - 10:05 TBD -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">09:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">TBD</h3>
+            <p class="text-slate-400">09:15 - 10:05</p>
+          </div>
+        </div>
+
+        <!-- Session 1: ADME considerations -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">10:05</span>
+          </div>
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 1: ADME Considerations for Drug Discovery and Development</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Matt Soars</h4>
+              <p class="text-xs text-slate-400">Executive Director, Bristol Myers Squibb</p>
+              <p class="text-xs text-slate-500 mt-1">10:05 - 10:40</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Raju Subramanian</h4>
+              <p class="text-xs text-slate-400">Executive Director, Gilead Sciences</p>
+              <p class="text-xs text-slate-500 mt-1">11:45 - 12:20</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Upendra Argikar</h4>
+              <p class="text-xs text-slate-400">DMPK Leader, Gates Medical Research Institute</p>
+              <p class="text-xs text-slate-500 mt-1">12:20 - 12:55</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10:40 - 11:00 Tea Break -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="1">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">10:40</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Tea Break</span>
+            <span class="material-symbols-outlined text-slate-600">local_cafe</span>
+          </div>
+        </div>
+
+        <!-- 11:00 - 11:15 Sponsor talk 1 -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-slate-500 text-sm">11:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Sponsor Talk 1</h4>
+            <p class="text-slate-400">11:00 - 11:15</p>
+          </div>
+        </div>
+
+        <!-- 11:15 - 11:30 Sponsor talk 2 -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-slate-500 text-sm">11:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Sponsor Talk 2</h4>
+            <p class="text-slate-400">11:15 - 11:30</p>
+          </div>
+        </div>
+
+        <!-- 13:00 - 13:30 Group Photo -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="1">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">13:00</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Group Photo</span>
+            <span class="material-symbols-outlined text-slate-600">photo_camera</span>
+          </div>
+        </div>
+
+        <!-- 13:30 - 16:00 Lunch, Poster & Exhibitor Session -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="1">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">13:30</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Lunch, Poster & Exhibitor Session</span>
+            <span class="material-symbols-outlined text-slate-600">restaurant</span>
+          </div>
+        </div>
+
+        <!-- 16:00 - 17:45 Sessions 2 & 3 (Parallel) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">16:00</span>
+          </div>
+          
+          <!-- Session 2: AI/ML Left Column -->
+          <div class="border-b md:border-b-0 md:border-r border-border-dark">
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 2: AI/ML in Drug Discovery</h3>
+            </div>
+            <!-- Speaker 1 -->
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Shridhar Narayanan</h4>
+              <p class="text-xs text-slate-400">Founder, Peptris / FNDR</p>
+              <p class="text-xs text-slate-500 mt-1">16:00 - 16:35</p>
+            </div>
+            <!-- Speaker 2 -->
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Mr. Prasad Chodavarupu</h4>
+              <p class="text-xs text-slate-400">Founder & Managing Director, Aganitha Cognitive Sciences</p>
+              <p class="text-xs text-slate-500 mt-1">16:35 - 17:10</p>
+            </div>
+            <!-- Speaker 3 -->
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Narmada B C</h4>
+              <p class="text-xs text-slate-400">Lead Scientist, Vantage</p>
+              <p class="text-xs text-slate-500 mt-1">17:10 - 17:45</p>
+            </div>
+          </div>
+
+          <!-- Session 3: BCD Right Column -->
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 3: BCD</h3>
+            </div>
+            <!-- Speaker 1 -->
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Prof. Arvind K Bansal</h4>
+              <p class="text-xs text-slate-400">NIPER</p>
+              <p class="text-xs text-slate-500 mt-1">16:00 - 16:35</p>
+            </div>
+            <!-- Speaker 2 -->
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Ramanaiah Chennuru</h4>
+              <p class="text-xs text-slate-400">CIPLA</p>
+              <p class="text-xs text-slate-500 mt-1">16:35 - 17:10</p>
+            </div>
+            <!-- Speaker 3 -->
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Sharmistha Paldatta</h4>
+              <p class="text-xs text-slate-400">Dr. Reddy's</p>
+              <p class="text-xs text-slate-500 mt-1">17:10 - 17:45</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17:45 - 18:15 Special session on "Resilience Decoded" -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">17:45</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">Special</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Resilience Decoded</h3>
+            <p class="text-sm text-slate-400 mb-2">Dr. Sujata Kelkar</p>
+            <p class="text-slate-400">17:45 - 18:15</p>
+          </div>
+        </div>
+
+        <!-- 18:15 - 19:15 Cultural Program -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark relative overflow-hidden" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">18:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Entertainment</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Cultural Program</h3>
+            <p class="text-slate-400">18:15 - 19:15</p>
+          </div>
+        </div>
+
+        <!-- 19:15 - 21:30 Networking and Dinner -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="1">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">19:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Networking</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Networking and Dinner</h3>
+            <p class="text-sm text-slate-400 mb-2">Ramaiah University</p>
+            <p class="text-slate-400">19:15 - 21:30</p>
+          </div>
+        </div>
+
+        <!-- ===== DAY 2 CONTENT ===== -->
+
+        <!-- 08:00 - 09:00 Registration and Breakfast -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">08:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Registration</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Registration and Breakfast</h3>
+            <p class="text-slate-400">08:00 - 09:00</p>
+          </div>
+        </div>
+
+        <!-- Session 4: Technological Innovations in Drug Discovery and Development -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">09:00</span>
+          </div>
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 4: Technological Innovations in Drug Discovery and Development</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">09:00 - 10:00</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr Manojkumar Singh</h4>
+              <p class="text-xs text-slate-400">Microlabs</p>
+              <p class="text-xs text-slate-500 mt-1">10:00 - 10:35</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Prof. Malla Reddy</h4>
+              <p class="text-xs text-slate-400">IIT - Hyderabad</p>
+              <p class="text-xs text-slate-500 mt-1">11:15 - 11:50</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">11:50 - 12:25</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10:35 - 10:45 Tea Break -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="2">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">10:35</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Tea Break</span>
+            <span class="material-symbols-outlined text-slate-600">local_cafe</span>
+          </div>
+        </div>
+
+        <!-- 10:45 - 11:15 Sponsor talk 3 -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-slate-500 text-sm">10:45</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Sponsor Talk 3</h3>
+            <p class="text-slate-400">10:45 - 11:15</p>
+          </div>
+        </div>
+
+        <!-- 12:30 - 13:30 Student talks -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">12:30</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Students</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Student Talks</h3>
+            <p class="text-slate-400">12:30 - 13:30</p>
+          </div>
+        </div>
+
+        <!-- 13:30 - 16:00 Lunch, Poster & Exhibitor Session -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="2">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">13:30</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Lunch, Poster & Exhibitor Session</span>
+            <span class="material-symbols-outlined text-slate-600">restaurant</span>
+          </div>
+        </div>
+
+        <!-- 16:00 - 17:45 Sessions 5 & 6 (Parallel) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">16:00</span>
+          </div>
+          
+          <!-- Session 5: Next Generation Therapeutics -->
+          <div class="border-b md:border-b-0 md:border-r border-border-dark">
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 5: Next Generation Therapeutics</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Maloy Ghosh</h4>
+              <p class="text-xs text-slate-400">CSO, Zumutor Biologics</p>
+              <p class="text-xs text-slate-500 mt-1">16:00 - 16:35</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Arati Ramesh</h4>
+              <p class="text-xs text-slate-400">Principal Scientist, Tata Institute of Genomics and Society</p>
+              <p class="text-xs text-slate-500 mt-1">16:35 - 17:10</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">17:10 - 17:45</p>
+            </div>
+          </div>
+
+          <!-- Session 6: Intricacies in the Development of Next Generation Therapeutics -->
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 6: Intricacies in Next Gen Therapeutics</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">16:00 - 16:35</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">16:35 - 17:10</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Dr. Manikandan R</h4>
+              <p class="text-xs text-slate-400">Granules India</p>
+              <p class="text-xs text-slate-500 mt-1">17:10 - 17:45</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">TBD</h4>
+              <p class="text-xs text-slate-500 mt-1">17:45 - 18:30</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 19:00 - 21:00 Networking and Banquet Dinner -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="2">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">19:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Networking</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Networking and Banquet Dinner</h3>
+            <p class="text-sm text-slate-400 mb-2">Gokulam Grande</p>
+            <p class="text-slate-400">19:00 - 21:00</p>
+          </div>
+        </div>
+
+        <!-- ===== DAY 3 CONTENT ===== -->
+
+        <!-- 08:00 - 09:00 Breakfast -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="3">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">08:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wider border border-slate-700">Breakfast</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Breakfast</h3>
+            <p class="text-slate-400">08:00 - 09:00</p>
+          </div>
+        </div>
+
+        <!-- Session 7: Advances in Clinical Pharmacology -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="3">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">09:00</span>
+          </div>
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 7: Advances in Clinical Pharmacology</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Hiroyuki Kusuhara</h4>
+              <p class="text-xs text-slate-400">University of Tokyo</p>
+              <p class="text-xs text-slate-500 mt-1">09:00 - 09:35</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Rama Sivasubramanian</h4>
+              <p class="text-xs text-slate-400">Teva</p>
+              <p class="text-xs text-slate-500 mt-1">09:35 - 10:10</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Prof. Sahadev Shankarappa</h4>
+              <p class="text-xs text-slate-400">Ramaiah University</p>
+              <p class="text-xs text-slate-500 mt-1">10:10 - 10:45</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10:45 - 11:00 Tea Break -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark bg-surface-dark/30" data-day="3">
+          <div class="p-4 md:border-r border-border-dark flex items-center justify-start md:justify-end">
+            <span class="font-mono text-slate-600 text-sm">10:45</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-slate-500 font-mono uppercase tracking-widest text-sm">Tea Break</span>
+            <span class="material-symbols-outlined text-slate-600">local_cafe</span>
+          </div>
+        </div>
+
+        <!-- 11:00 - 11:30 Sponsor talks -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="3">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-slate-500 text-sm">11:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Sponsor Talks</h3>
+            <p class="text-slate-400">11:00 - 11:30</p>
+          </div>
+        </div>
+
+        <!-- Session 8: Case Studies in Drug Discovery and Development -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="3">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">11:30</span>
+          </div>
+          <div>
+            <div class="p-3 border-b border-border-dark bg-slate-800/50">
+              <h3 class="text-lg font-bold text-white">Session 8: Case Studies in Drug Discovery and Development</h3>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Kumar Nemmani</h4>
+              <p class="text-xs text-slate-400">Associate Vice President, Sun Pharma</p>
+              <p class="text-xs text-slate-500 mt-1">11:30 - 12:05</p>
+            </div>
+            <div class="p-5 border-b border-border-dark hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Prof. Sowdhamini</h4>
+              <p class="text-xs text-slate-400">Senior Professor, National Center for Biological Sciences</p>
+              <p class="text-xs text-slate-500 mt-1">12:35 - 13:10</p>
+            </div>
+            <div class="p-5 hover:bg-surface-dark/40 transition-colors">
+              <h4 class="text-base font-bold text-white mb-1">Prof. Ravi Shah</h4>
+              <p class="text-xs text-slate-400">NIPER</p>
+              <p class="text-xs text-slate-500 mt-1">13:10 - 13:45</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13:45 - 14:00 Awards and Conclusion -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-border-dark" data-day="3">
+          <div class="p-6 md:border-r border-border-dark flex items-start justify-start md:justify-end">
+            <span class="font-mono text-primary text-sm">13:45</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">Closing</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Awards and Conclusion</h3>
+            <p class="text-slate-400">13:45 - 14:00</p>
+          </div>
+        </div>
+          <button
+            class="w-full py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-all text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 group"
+          >
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            Download PDF
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="w-full border-t border-editorial-dark dark:border-white bg-editorial-dark text-editorial-cream dark:bg-black dark:text-gray-400 py-6 px-6"
+    >
+      <div class="max-w-[1440px] mx-auto flex justify-center items-center">
+        <p class="font-mono text-xs uppercase tracking-widest text-center">
+          Designed and Developed by
+          <a
+            class="text-primary hover:text-white dark:hover:text-white transition-colors underline underline-offset-4"
+            href="https://www.linkedin.com/in/leroy-alvares/"
+            >Leroy Alvares</a
+          >
+          | SSX - India
+        </p>
+      </div>
+    </footer>
+    <script>
+      let currentDay = 1;
+
+      function filterScheduleByDay(day) {
+        currentDay = day;
+        
+        // Update all schedule items visibility
+        const scheduleItems = document.querySelectorAll('.schedule-item');
+        scheduleItems.forEach(item => {
+          if (parseInt(item.dataset.day) === day) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+        
+        // Update day button active states
+        const dayButtons = document.querySelectorAll('.day-button');
+        dayButtons.forEach(button => {
+          if (parseInt(button.dataset.day) === day) {
+            button.classList.add('active');
+          } else {
+            button.classList.remove('active');
+          }
+        });
+      }
+      
+      // Initialize with day 1 visible
+      document.addEventListener('DOMContentLoaded', function() {
+        filterScheduleByDay(1);
+      });
+    </script>
+  </body>
+</html>
