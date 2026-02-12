@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>SSX 2026 Program Schedule</title>
+    <title>SSX 2026 | Program Schedule</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
@@ -152,29 +157,79 @@
         <nav class="hidden md:flex items-center gap-10">
           <a
             class="text-sm font-medium text-ssx-slate hover:text-ssx-blue transition-colors"
-            href="speakers.html"
-            >Speakers</a
+            href="index.html"
+            >Home</a
           >
           <a
             class="text-sm font-medium text-ssx-navy border-b-2 border-ssx-blue pb-0.5"
             href="program.html"
             >Schedule</a
           >
+          <a
+            class="text-sm font-medium text-ssx-slate hover:text-ssx-blue transition-colors"
+            href="speakers.html"
+            >Speakers</a
+          >
+          <a
+            class="text-sm font-medium text-ssx-slate hover:text-ssx-blue transition-colors"
+            href="contact.html"
+            >Contact</a
+          >
         </nav>
-        <button
-          class="hidden md:flex items-center gap-2 px-5 py-2 bg-ssx-blue hover:bg-blue-700 text-white text-sm font-bold tracking-wide rounded transition-colors group"
+        <a
+          href="https://in.eregnow.com/ticketing/register/ssx2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex items-center gap-2 px-5 py-2 bg-ssx-blue hover:bg-blue-700 text-white text-sm font-bold tracking-wide rounded transition-colors group"
         >
           <span>REGISTER</span>
           <span
             class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform"
             >arrow_forward</span
           >
-        </button>
-        <button class="md:hidden text-white">
-          <span class="material-symbols-outlined">menu</span>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-ssx-navy p-2 hover:bg-ssx-gray/10 rounded transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
         </button>
       </div>
     </header>
+    <nav id="mobile-menu" class="hidden md:hidden fixed top-[57px] left-0 right-0 bg-ssx-cream text-ssx-navy flex flex-col z-30 border-b border-ssx-grid">
+      <div class="border-b border-ssx-grid">
+        <a
+          class="block px-6 py-4 text-base font-medium text-ssx-navy hover:bg-ssx-blue/5 transition-colors"
+          href="index.html"
+        >Home</a>
+      </div>
+      <div class="border-b border-ssx-grid">
+        <a
+          class="block px-6 py-4 text-base font-medium text-ssx-navy hover:bg-ssx-blue/5 transition-colors"
+          href="program.html"
+        >Schedule</a>
+      </div>
+      <div class="border-b border-ssx-grid">
+        <a
+          class="block px-6 py-4 text-base font-medium text-ssx-navy hover:bg-ssx-blue/5 transition-colors"
+          href="speakers.html"
+        >Speakers</a>
+      </div>
+      <div class="border-b border-ssx-grid">
+        <a
+          class="block px-6 py-4 text-base font-medium text-ssx-navy hover:bg-ssx-blue/5 transition-colors"
+          href="contact.html"
+        >Contact</a>
+      </div>
+      <div class="px-6 py-4">
+        <a
+          href="https://in.eregnow.com/ticketing/register/ssx2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2 bg-ssx-blue hover:bg-blue-700 text-white text-sm font-bold tracking-wide rounded transition-colors w-full justify-center group"
+        >
+          <span>REGISTER</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </nav>
     <main
       class="relative z-10 flex-1 w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row"
     >
@@ -258,41 +313,48 @@
         </div>
       </aside>
       <section class="flex-1 brutalist-grid min-h-screen pb-20">
-        <!-- 07:30 - 08:45 Registration and Breakfast -->
+        <!-- DAY 1: FEBRUARY 20, 2026 -->
+        <!-- 08:00 - 08:45 Registration and Breakfast -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">07:30</span>
+            <span class="font-mono text-ssx-blue text-sm">08:00</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
               <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Registration</span>
             </div>
             <h3 class="text-2xl font-bold text-ssx-navy mb-2">Registration and Breakfast</h3>
-            <p class="text-ssx-slate">07:30 - 08:45</p>
+            <p class="text-ssx-slate">08:00 - 08:45</p>
           </div>
         </div>
 
-        <!-- 08:45 - 09:15 Inauguration-->
+        <!-- 08:45 - 09:15 Inauguration -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
             <span class="font-mono text-ssx-blue text-sm">08:45</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Opening</span>
+              <span class="px-2 py-0.5 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Opening</span>
             </div>
             <h3 class="text-2xl font-bold text-ssx-navy mb-2">Inauguration</h3>
             <p class="text-ssx-slate">08:45 - 09:15</p>
+            <p class="text-xs text-ssx-slate/70 mt-2">Co-Chairs: Bharath S and Anandi Karumbati</p>
           </div>
         </div>
 
-        <!-- 09:15 - 10:05 TBD -->
+        <!-- 09:15 - 10:05 Keynote 1 -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
             <span class="font-mono text-ssx-blue text-sm">09:15</span>
           </div>
           <div class="p-8 relative z-10">
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">TBD</h3>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Keynote</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Dr. Ashok Venkitaraman</h3>
+            <p class="text-sm text-ssx-slate mb-2">Distinguished Professor of Medicine, NUS, Chief Scientist, A-STAR, Singapore</p>
+            <p class="text-xs text-ssx-slate/70">Co-Chair: Anandi Karumbati</p>
             <p class="text-ssx-slate">09:15 - 10:05</p>
           </div>
         </div>
@@ -304,69 +366,23 @@
           </div>
           <div>
             <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 1: ADME Considerations for Drug Discovery and Development</h3>
-            </div>
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Matt Soars</h4>
-              <p class="text-xs text-ssx-slate">Executive Director, Bristol Myers Squibb</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">10:05 - 10:40</p>
+              <h3 class="text-lg font-bold text-ssx-navy">Session 1: ADME considerations for drug discovery and development</h3>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
               <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Raju Subramanian</h4>
-              <p class="text-xs text-ssx-slate">Executive Director, Gilead Sciences</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">11:45 - 12:20</p>
+              <p class="text-xs text-ssx-slate">Executive Director, Gilead Sciences, USA</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">10:05 - 10:40</p>
             </div>
             <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Upendra Argikar</h4>
-              <p class="text-xs text-ssx-slate">DMPK Leader, Gates Medical Research Institute</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">12:20 - 12:55</p>
+              <p class="text-xs text-ssx-slate/70">Co-Chair: Anandi Karumbati</p>
             </div>
           </div>
         </div>
 
-        <!-- 10:40 - 11:00 Tea Break -->
+        <!-- 10:40 - 10:55 Group Photo -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="1">
           <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
             <span class="font-mono text-ssx-blue text-sm">10:40</span>
-          </div>
-          <div class="p-4 flex items-center justify-between">
-            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Tea Break</span>
-            <span class="material-symbols-outlined text-ssx-blue">local_cafe</span>
-          </div>
-        </div>
-
-        <!-- 11:00 - 11:15 Sponsor talk 1 -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">11:00</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
-            </div>
-            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk 1</h4>
-            <p class="text-ssx-slate">11:00 - 11:15</p>
-          </div>
-        </div>
-
-        <!-- 11:15 - 11:30 Sponsor talk 2 -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">11:15</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
-            </div>
-            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk 2</h4>
-            <p class="text-ssx-slate">11:15 - 11:30</p>
-          </div>
-        </div>
-
-        <!-- 13:00 - 13:30 Group Photo -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="1">
-          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">13:00</span>
           </div>
           <div class="p-4 flex items-center justify-between">
             <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Group Photo</span>
@@ -374,168 +390,10 @@
           </div>
         </div>
 
-        <!-- 13:30 - 16:00 Lunch, Poster & Exhibitor Session -->
+        <!-- 10:55 - 11:10 Tea Break -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="1">
           <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">13:30</span>
-          </div>
-          <div class="p-4 flex items-center justify-between">
-            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Lunch, Poster & Exhibitor Session</span>
-            <span class="material-symbols-outlined text-ssx-blue">restaurant</span>
-          </div>
-        </div>
-
-        <!-- 16:00 - 17:45 Sessions 2 & 3 (Parallel) -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr_1fr] border-b border-ssx-grid" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">16:00</span>
-          </div>
-          
-          <!-- Session 2: AI/ML Left Column -->
-          <div class="border-b md:border-b-0 md:border-r border-ssx-grid">
-            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 2: AI/ML in Drug Discovery</h3>
-            </div>
-            <!-- Speaker 1 -->
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Shridhar Narayanan</h4>
-              <p class="text-xs text-ssx-slate">Founder, Peptris / FNDR</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">16:00 - 16:35</p>
-            </div>
-            <!-- Speaker 2 -->
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Mr. Prasad Chodavarupu</h4>
-              <p class="text-xs text-ssx-slate">Founder & Managing Director, Aganitha Cognitive Sciences</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">16:35 - 17:10</p>
-            </div>
-            <!-- Speaker 3 -->
-            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Narmada B C</h4>
-              <p class="text-xs text-ssx-slate">Lead Scientist, Vantage</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">17:10 - 17:45</p>
-            </div>
-          </div>
-
-          <!-- Session 3: BCD Right Column -->
-          <div>
-            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 3: BCD</h3>
-            </div>
-            <!-- Speaker 1 -->
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Prof. Arvind K Bansal</h4>
-              <p class="text-xs text-ssx-slate">NIPER</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">16:00 - 16:35</p>
-            </div>
-            <!-- Speaker 2 -->
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Ramanaiah Chennuru</h4>
-              <p class="text-xs text-ssx-slate">CIPLA</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">16:35 - 17:10</p>
-            </div>
-            <!-- Speaker 3 -->
-            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Sharmistha Paldatta</h4>
-              <p class="text-xs text-ssx-slate">Dr. Reddy's</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">17:10 - 17:45</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 17:45 - 18:15 Special session on "Resilience Decoded" -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">17:45</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">Special</span>
-            </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Resilience Decoded</h3>
-            <p class="text-sm text-ssx-slate mb-2">Dr. Sujata Kelkar</p>
-            <p class="text-ssx-slate">17:45 - 18:15</p>
-          </div>
-        </div>
-
-        <!-- 18:15 - 19:15 Cultural Program -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid relative overflow-hidden" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">18:15</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Entertainment</span>
-            </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Cultural Program</h3>
-            <p class="text-ssx-slate">18:15 - 19:15</p>
-          </div>
-        </div>
-
-        <!-- 19:15 - 21:30 Networking and Dinner -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">19:15</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Networking</span>
-            </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Networking and Dinner</h3>
-            <p class="text-sm text-ssx-slate mb-2">Ramaiah University</p>
-            <p class="text-ssx-slate">19:15 - 21:30</p>
-          </div>
-        </div>
-
-        <!-- ===== DAY 2 CONTENT ===== -->
-
-        <!-- 08:00 - 09:00 Registration and Breakfast -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">08:00</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Registration</span>
-            </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Registration and Breakfast</h3>
-            <p class="text-ssx-slate">08:00 - 09:00</p>
-          </div>
-        </div>
-
-        <!-- Session 4: Technological Innovations in Drug Discovery and Development -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">09:00</span>
-          </div>
-          <div>
-            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 4: Technological Innovations in Drug Discovery and Development</h3>
-            </div>
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
-              <p class="text-xs text-ssx-slate/70 mt-1">09:00 - 10:00</p>
-            </div>
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr Manojkumar Singh</h4>
-              <p class="text-xs text-ssx-slate">Microlabs</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">10:00 - 10:35</p>
-            </div>
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Prof. Malla Reddy</h4>
-              <p class="text-xs text-ssx-slate">IIT - Hyderabad</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">11:15 - 11:50</p>
-            </div>
-            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
-              <p class="text-xs text-ssx-slate/70 mt-1">11:50 - 12:25</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10:35 - 10:45 Tea Break -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="2">
-          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">10:35</span>
+            <span class="font-mono text-ssx-blue text-sm">10:55</span>
           </div>
           <div class="p-4 flex items-center justify-between">
             <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Tea Break</span>
@@ -543,31 +401,300 @@
           </div>
         </div>
 
-        <!-- 10:45 - 11:15 Sponsor talk 3 -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+        <!-- 11:10 - 11:30 Sponsor talk (Eurofins) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">10:45</span>
+            <span class="font-mono text-ssx-blue text-sm">11:10</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
               <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
             </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Sponsor Talk 3</h3>
-            <p class="text-ssx-slate">10:45 - 11:15</p>
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk: Eurofins</h4>
+            <p class="text-ssx-slate">11:10 - 11:30</p>
+            <p class="text-xs text-ssx-slate/70 mt-2">Co-Chairs: Geetha T and Krishna Iyer</p>
           </div>
         </div>
 
-        <!-- 12:30 - 13:30 Student talks -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+        <!-- 11:30 - 11:50 Sponsor talk (Krishagen) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">12:30</span>
+            <span class="font-mono text-ssx-blue text-sm">11:30</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Students</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
             </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Student Talks</h3>
-            <p class="text-ssx-slate">12:30 - 13:30</p>
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk: Krishagen</h4>
+            <p class="text-ssx-slate">11:30 - 11:50</p>
+          </div>
+        </div>
+
+        <!-- 11:50 - 12:25 Dr. Upendra Argikar -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">11:50</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Dr. Upendra Argikar</h4>
+            <p class="text-xs text-ssx-slate">DMPK Leader, Gates Medical Research Institute, USA</p>
+            <p class="text-xs text-ssx-slate/70 mt-1">11:50 - 12:25</p>
+          </div>
+        </div>
+
+        <!-- 12:25 - 13:00 Dr. Devang Shah -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">12:25</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Dr. Devang Shah</h4>
+            <p class="text-xs text-ssx-slate">Director, Bristol Myers Squibb, Bangalore</p>
+            <p class="text-xs text-ssx-slate/70 mt-1">12:25 - 13:00</p>
+          </div>
+        </div>
+
+        <!-- 13:00 - 15:30 Lunch, Poster & Exhibitor Session -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="1">
+          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">13:00</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Lunch, Poster & Exhibitor Session</span>
+            <span class="material-symbols-outlined text-ssx-blue">restaurant</span>
+          </div>
+        </div>
+
+        <!-- 15:30 - 17:15 Sessions 2 & 3 (Parallel) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">15:30</span>
+          </div>
+          
+          <!-- Session 2: AI/ML Left Column -->
+          <div class="border-b md:border-b-0 md:border-r border-ssx-grid">
+            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
+              <h3 class="text-lg font-bold text-ssx-navy">Session 2: AI/ML considerations in drug discovery and Development</h3>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Shridhar Narayanan</h4>
+              <p class="text-xs text-ssx-slate">Founder, Peptris / FNDR, Bangalore</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">15:30 - 16:05</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Priyrajan Pattanaik</h4>
+              <p class="text-xs text-ssx-slate">Vice President, Syngene International Limited, Bangalore</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">16:05 - 16:40</p>
+            </div>
+            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Ramanathan Sowdhamini</h4>
+              <p class="text-xs text-ssx-slate">Senior Professor, National Center for Biological Sciences, Bangalore</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">16:40 - 17:15</p>
+            </div>
+          </div>
+
+          <!-- Session 3: Solid State Right Column -->
+          <div>
+            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
+              <h3 class="text-lg font-bold text-ssx-navy">Session 3: Advancements in Understanding Solid State of Pharmaceuticals</h3>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Arvind K Bansal</h4>
+              <p class="text-xs text-ssx-slate">Professor, Department of Pharmaceutics, NIPER, Mohali</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">15:30 - 16:05</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Ramanaiah Chennuru</h4>
+              <p class="text-xs text-ssx-slate">Director and Head, COE-Polymorphism and Crystallization, Cipla Ltd.</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">16:05 - 16:40</p>
+            </div>
+            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Sharmistha Paldatta</h4>
+              <p class="text-xs text-ssx-slate">Scientist & Lead, Solid State Screening Group, Dr. Reddy's Laboratories, Hyderabad</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">16:40 - 17:15</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17:15 - 17:50 Special session on "Resilience Decoded" -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">17:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Special Session</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Resilience Decoded</h3>
+            <p class="text-sm text-ssx-slate mb-2">Dr. Sujata Kelkar</p>
+            <p class="text-xs text-ssx-slate/70">Co-Chairs: Gauri and Manasa Deepa</p>
+            <p class="text-ssx-slate">17:15 - 17:50</p>
+          </div>
+        </div>
+
+        <!-- 17:50 - 18:10 Preparation for cultural program -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="1">
+          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">17:50</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Preparation for Cultural Program</span>
+            <span class="material-symbols-outlined text-ssx-blue">event</span>
+          </div>
+        </div>
+
+        <!-- 18:10 - 19:30 Cultural Program -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">18:10</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Entertainment</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Cultural Program</h3>
+            <p class="text-ssx-slate">18:10 - 19:30</p>
+          </div>
+        </div>
+
+        <!-- 19:30 - 20:30 Networking and Dinner -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="1">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">19:30</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Networking</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Networking and Dinner at Ramaiah University</h3>
+            <p class="text-ssx-slate">19:30 - 20:30</p>
+          </div>
+        </div>
+
+        <!-- DAY 2: FEBRUARY 21, 2026 -->
+        <!-- 08:00 - 08:30 Breakfast -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">08:00</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Breakfast</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Breakfast</h3>
+            <p class="text-ssx-slate">08:00 - 08:30</p>
+          </div>
+        </div>
+
+        <!-- 08:30 - 09:20 Keynote 2 -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">08:30</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Keynote</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Dr. Stephan Brombacher</h3>
+            <p class="text-sm text-ssx-slate mb-2">Novartis</p>
+            <p class="text-xs text-ssx-slate/70">Co-Chair: Hemant Bhutani</p>
+            <p class="text-ssx-slate">08:30 - 09:20</p>
+          </div>
+        </div>
+
+        <!-- Session 4: Technological Innovations -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">09:20</span>
+          </div>
+          <div>
+            <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
+              <h3 class="text-lg font-bold text-ssx-navy">Session 4: Technological Innovations in Drug Discovery and Development</h3>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Manojkumar Singh</h4>
+              <p class="text-xs text-ssx-slate">Senior Vice President, Analytical Research and Development, Microlabs</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">09:20 - 09:55</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Sajesh Thomas</h4>
+              <p class="text-xs text-ssx-slate">Associate Professor, IIT, Delhi</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">09:55 - 10:30</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Sunil Kumar Panigrahi</h4>
+              <p class="text-xs text-ssx-slate">Associate Vice President, Aurigene Pharmaceutical Services Ltd.</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">10:30 - 11:05</p>
+            </div>
+            <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
+              <p class="text-xs text-ssx-slate/70">Co-Chairs: Lakshmikant Baipai and Rajesh Gandhi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11:05 - 11:20 Tea Break -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="2">
+          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">11:05</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Tea Break</span>
+            <span class="material-symbols-outlined text-ssx-blue">local_cafe</span>
+          </div>
+        </div>
+
+        <!-- 11:20 - 11:40 Sponsor talk - Corning -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">11:20</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk: Corning</h4>
+            <p class="text-ssx-slate">11:20 - 11:40</p>
+          </div>
+        </div>
+
+        <!-- 11:40 - 12:00 Sponsor talk - Aragen -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">11:40</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
+            </div>
+            <h4 class="text-lg font-bold text-ssx-navy mb-2">Sponsor Talk: Aragen</h4>
+            <p class="text-ssx-slate">11:40 - 12:00</p>
+            <p class="text-xs text-ssx-slate/70 mt-2">Co-Chair: Shashyendra Singh</p>
+          </div>
+        </div>
+
+        <!-- 12:00 - 12:20 Felicitation of sponsors -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="2">
+          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">12:00</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Felicitation of Sponsors</span>
+            <span class="material-symbols-outlined text-ssx-blue">celebration</span>
+          </div>
+        </div>
+
+        <!-- 12:20 - 13:30 Student Talks (6 Talks) -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">12:20</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Student Talks</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Student Talks (6 Talks)</h3>
+            <p class="text-ssx-slate">12:20 - 13:30</p>
+            <p class="text-xs text-ssx-slate/70 mt-2">Co-Chairs: Amol Raje and Deveshwaran</p>
           </div>
         </div>
 
@@ -588,7 +715,7 @@
             <span class="font-mono text-ssx-blue text-sm">16:00</span>
           </div>
           
-          <!-- Session 5: Next Generation Therapeutics -->
+          <!-- Session 5: Next Generation Therapeutics Left Column -->
           <div class="border-b md:border-b-0 md:border-r border-ssx-grid">
             <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
               <h3 class="text-lg font-bold text-ssx-navy">Session 5: Next Generation Therapeutics</h3>
@@ -604,54 +731,58 @@
               <p class="text-xs text-ssx-slate/70 mt-1">16:35 - 17:10</p>
             </div>
             <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Narmada B C</h4>
+              <p class="text-xs text-ssx-slate">Lead Scientist, Vantage</p>
               <p class="text-xs text-ssx-slate/70 mt-1">17:10 - 17:45</p>
             </div>
           </div>
 
-          <!-- Session 6: Intricacies in the Development of Next Generation Therapeutics -->
+          <!-- Session 6: Intricacies in Development of NGT Right Column -->
           <div>
             <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 6: Intricacies in Next Gen Therapeutics</h3>
+              <h3 class="text-lg font-bold text-ssx-navy">Session 6: Intricacies in Development of Next Generation Therapeutics</h3>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Ravi Shah</h4>
+              <p class="text-xs text-ssx-slate">Professor & Head, Department of Pharmaceutical Analysis, NIPER, Ahmedabad</p>
               <p class="text-xs text-ssx-slate/70 mt-1">16:00 - 16:35</p>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. M. V. Narendra Kumar Talluri</h4>
+              <p class="text-xs text-ssx-slate">Director, Daicel Chiral Technologies</p>
               <p class="text-xs text-ssx-slate/70 mt-1">16:35 - 17:10</p>
             </div>
-            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Manikandan R</h4>
-              <p class="text-xs text-ssx-slate">Granules India</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">17:10 - 17:45</p>
-            </div>
             <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">TBD</h4>
-              <p class="text-xs text-ssx-slate/70 mt-1">17:45 - 18:30</p>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Manikandan R</h4>
+              <p class="text-xs text-ssx-slate">Senior Vice President, Analytical Research and Development, Granules India</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">17:10 - 17:45</p>
             </div>
           </div>
         </div>
 
-        <!-- 19:00 - 21:00 Networking and Banquet Dinner -->
+        <!-- 17:45 - 18:30 Panel Discussion - Fireside chat with Pathbreakers -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="2">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">19:00</span>
+            <span class="font-mono text-ssx-blue text-sm">17:45</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Networking</span>
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Panel</span>
             </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Networking and Banquet Dinner</h3>
-            <p class="text-sm text-ssx-slate mb-2">Gokulam Grande</p>
-            <p class="text-ssx-slate">19:00 - 21:00</p>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Panel Discussion: Fireside Chat with Pathbreakers</h3>
+            <p class="text-sm text-ssx-slate mb-2">
+              • Chandra Siddamadappa, Vipragen<br />
+              • Vijay Ivaturi, Pumas AI<br />
+              • Srividya Janani, Biomonetra<br />
+              • Gopi Kadiyala, Kyntox Biotech
+            </p>
+            <p class="text-xs text-ssx-slate/70">Co-Chair: T. Thanga Mariappan</p>
+            <p class="text-ssx-slate">17:45 - 18:30</p>
           </div>
         </div>
 
-        <!-- ===== DAY 3 CONTENT ===== -->
-
-        <!-- 08:00 - 09:00 Breakfast -->
+        <!-- DAY 3: FEBRUARY 22, 2026 -->
+        <!-- 08:00 - 08:30 Breakfast -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
             <span class="font-mono text-ssx-blue text-sm">08:00</span>
@@ -661,41 +792,44 @@
               <span class="px-2 py-1 rounded bg-ssx-slate/10 text-ssx-slate text-[10px] font-bold uppercase tracking-wider border border-ssx-slate/20">Breakfast</span>
             </div>
             <h3 class="text-2xl font-bold text-ssx-navy mb-2">Breakfast</h3>
-            <p class="text-ssx-slate">08:00 - 09:00</p>
+            <p class="text-ssx-slate">08:00 - 08:30</p>
           </div>
         </div>
 
         <!-- Session 7: Advances in Clinical Pharmacology -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">09:00</span>
+            <span class="font-mono text-ssx-blue text-sm">08:30</span>
           </div>
           <div>
             <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
               <h3 class="text-lg font-bold text-ssx-navy">Session 7: Advances in Clinical Pharmacology</h3>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Hiroyuki Kusuhara</h4>
-              <p class="text-xs text-ssx-slate">University of Tokyo</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">09:00 - 09:35</p>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Hiroyuki Kusuhara</h4>
+              <p class="text-xs text-ssx-slate">University of Tokyo, President of JSSX</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">08:30 - 09:05</p>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Rama Sivasubramanian</h4>
-              <p class="text-xs text-ssx-slate">Teva</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">09:35 - 10:10</p>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Rama Sivasubramanian</h4>
+              <p class="text-xs text-ssx-slate">Head of R&D, Teva Pharmaceuticals</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">09:05 - 09:40</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Sahadev Shankarappa</h4>
+              <p class="text-xs text-ssx-slate">Professor, Ramaiah University</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">09:40 - 10:15</p>
             </div>
             <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Prof. Sahadev Shankarappa</h4>
-              <p class="text-xs text-ssx-slate">Ramaiah University</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">10:10 - 10:45</p>
+              <p class="text-xs text-ssx-slate/70">Co-Chairs: Premkumar and Ashoka Babu V L</p>
             </div>
           </div>
         </div>
 
-        <!-- 10:45 - 11:00 Tea Break -->
+        <!-- 10:15 - 10:30 Tea Break -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="3">
           <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">10:45</span>
+            <span class="font-mono text-ssx-blue text-sm">10:15</span>
           </div>
           <div class="p-4 flex items-center justify-between">
             <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Tea Break</span>
@@ -703,60 +837,75 @@
           </div>
         </div>
 
-        <!-- 11:00 - 11:30 Sponsor talks -->
+        <!-- Session 8: Case studies in Drug Discovery and Development -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">11:00</span>
-          </div>
-          <div class="p-8 relative z-10">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">Sponsor</span>
-            </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Sponsor Talks</h3>
-            <p class="text-ssx-slate">11:00 - 11:30</p>
-          </div>
-        </div>
-
-        <!-- Session 8: Case Studies in Drug Discovery and Development -->
-        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
-          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">11:30</span>
+            <span class="font-mono text-ssx-blue text-sm">10:30</span>
           </div>
           <div>
             <div class="p-3 border-b border-ssx-grid bg-ssx-slate/5">
-              <h3 class="text-lg font-bold text-ssx-navy">Session 8: Case Studies in Drug Discovery and Development</h3>
+              <h3 class="text-lg font-bold text-ssx-navy">Session 8: Case studies in Drug Discovery and Development</h3>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Kumar Nemmani</h4>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Kumar Nemmani</h4>
               <p class="text-xs text-ssx-slate">Associate Vice President, Sun Pharma</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">11:30 - 12:05</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">10:30 - 11:05</p>
             </div>
             <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Prof. Sowdhamini</h4>
-              <p class="text-xs text-ssx-slate">Senior Professor, National Center for Biological Sciences</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">12:35 - 13:10</p>
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Mr. Prasad Chadavarupu</h4>
+              <p class="text-xs text-ssx-slate">Founder and Managing Director, Rigel Cognitive Sciences</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">11:05 - 11:40</p>
+            </div>
+            <div class="p-5 border-b border-ssx-grid hover:bg-ssx-navy/5 transition-colors">
+              <h4 class="text-base font-bold text-ssx-navy mb-1">Dr. Vijay Kulkarni</h4>
+              <p class="text-xs text-ssx-slate">Co-Founder & Director, Swalava Enterprises Private Ltd.</p>
+              <p class="text-xs text-ssx-slate/70 mt-1">11:40 - 12:15</p>
             </div>
             <div class="p-5 hover:bg-ssx-navy/5 transition-colors">
-              <h4 class="text-base font-bold text-ssx-navy mb-1">Prof. Ravi Shah</h4>
-              <p class="text-xs text-ssx-slate">NIPER</p>
-              <p class="text-xs text-ssx-slate/70 mt-1">13:10 - 13:45</p>
+              <p class="text-xs text-ssx-slate/70">Co-Chairs: Surulivel Rajan and Purnima Ashok</p>
             </div>
           </div>
         </div>
 
-        <!-- 13:45 - 14:00 Awards and Conclusion -->
+        <!-- 12:15 - 12:45 Awards -->
         <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
           <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
-            <span class="font-mono text-ssx-blue text-sm">13:45</span>
+            <span class="font-mono text-ssx-blue text-sm">12:15</span>
+          </div>
+          <div class="p-8 relative z-10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Awards</span>
+            </div>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Awards</h3>
+            <p class="text-xs text-ssx-slate/70">Co-Chairs: Amol Raje and Deveshwaran</p>
+            <p class="text-ssx-slate">12:15 - 12:45</p>
+          </div>
+        </div>
+
+        <!-- 12:45 - 13:00 Vote of Thanks -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid" data-day="3">
+          <div class="p-6 md:border-r border-ssx-grid flex items-start justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">12:45</span>
           </div>
           <div class="p-8 relative z-10">
             <div class="flex items-center gap-3 mb-3">
               <span class="px-2 py-1 rounded bg-ssx-blue/10 text-ssx-blue text-[10px] font-bold uppercase tracking-wider border border-ssx-blue/20">Closing</span>
             </div>
-            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Awards and Conclusion</h3>
-            <p class="text-ssx-slate">13:45 - 14:00</p>
+            <h3 class="text-2xl font-bold text-ssx-navy mb-2">Vote of Thanks</h3>
+            <p class="text-xs text-ssx-slate/70">Co-Chair: Arti Thakkar</p>
+            <p class="text-ssx-slate">12:45 - 13:00</p>
           </div>
         </div>
+
+        <!-- 13:00 - 14:00 Lunch -->
+        <div class="schedule-item grid grid-cols-1 md:grid-cols-[100px_1fr] border-b border-ssx-grid bg-ssx-slate/5" data-day="3">
+          <div class="p-4 md:border-r border-ssx-grid flex items-center justify-start md:justify-end">
+            <span class="font-mono text-ssx-blue text-sm">13:00</span>
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-ssx-slate/70 font-mono uppercase tracking-widest text-sm">Lunch</span>
+            <span class="material-symbols-outlined text-ssx-blue">restaurant</span>
+          </div>
         </div>
       </section>
     </main>
@@ -805,7 +954,26 @@
       // Initialize with day 1 visible
       document.addEventListener('DOMContentLoaded', function() {
         filterScheduleByDay(1);
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+          
+          // Close menu when a link is clicked
+          const menuLinks = mobileMenu.querySelectorAll('a');
+          menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+        }
       });
     </script>
   </body>
 </html>
+
