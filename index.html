@@ -1,415 +1,294 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>SSX 2026 | 9th Annual Conference</title>
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="prefetch" href="program.html" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "ssx-cream": "#FDFCF7",
-              "ssx-navy": "#1A237E",
-              "ssx-slate": "#4A5568",
-              "ssx-blue": "#135bec",
-              "ssx-grid": "rgba(0,0,0,0.05)",
-            },
-            fontFamily: {
-              display: ["Space Grotesk", "sans-serif"],
-              serif: ["Playfair Display", "serif"],
-              mono: ["JetBrains Mono", "monospace"],
-            },
-            borderRadius: {
-              DEFAULT: "0.125rem",
-              lg: "0.25rem",
-              xl: "0.5rem",
-              full: "0.75rem",
-            },
-            backgroundImage: {
-              noise: "url('https://grainy-gradients.vercel.app/noise.svg')",
-            },
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NQMTJ7HHS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3NQMTJ7HHS');
+  </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SSX 2026 | 9th Annual Conference</title>
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="prefetch" href="program.html" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "ssx-cream": "#FDFCF7",
+            "ssx-navy": "#1A237E",
+            "ssx-slate": "#4A5568",
+            "ssx-blue": "#135bec",
+            "ssx-grid": "rgba(0,0,0,0.05)",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          backgroundImage: {
+            noise: "url('https://grainy-gradients.vercel.app/noise.svg')",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        background-blend-mode: overlay;
-      }
-      .blend-overlay {
-        mix-blend-mode: overlay;
-      }
-      .blend-multiply {
-        mix-blend-mode: multiply;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-ssx-cream text-ssx-navy font-display antialiased overflow-x-hidden selection:bg-ssx-blue selection:text-white"
-  >
-    <div
-      class="fixed inset-0 pointer-events-none opacity-[0.03] z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
-    ></div>
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <svg
-        class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] opacity-10 text-ssx-navy"
-        viewBox="0 0 200 200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M40,100 L70,80 L100,100 L130,80 L160,100 M70,80 L70,50 M130,80 L130,50 M100,100 L100,130"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="0.5"
-        ></path>
-        <circle cx="40" cy="100" fill="currentColor" r="3"></circle>
-        <circle cx="70" cy="80" fill="currentColor" r="3"></circle>
-        <circle cx="100" cy="100" fill="currentColor" r="3"></circle>
-        <circle cx="130" cy="80" fill="currentColor" r="3"></circle>
-        <circle cx="160" cy="100" fill="currentColor" r="3"></circle>
-        <circle cx="70" cy="50" fill="currentColor" r="3"></circle>
-        <circle cx="130" cy="50" fill="currentColor" r="3"></circle>
-        <circle cx="100" cy="130" fill="currentColor" r="3"></circle>
-      </svg>
-      <svg
-        class="absolute bottom-[-5%] left-[-5%] w-[800px] h-[800px] opacity-5 text-ssx-navy"
-        viewBox="0 0 100 100"
-      >
-        <defs>
-          <pattern
-            height="10"
-            id="grid"
-            patternUnits="userSpaceOnUse"
-            width="10"
-          >
-            <path
-              d="M 10 0 L 0 0 0 10"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="0.2"
-            ></path>
-          </pattern>
-        </defs>
-        <rect fill="url(#grid)" height="100%" width="100%"></rect>
-      </svg>
-    </div>
-    <div class="relative z-10 flex flex-col min-h-screen">
-      <header
-        class="w-full border-b border-ssx-grid px-6 py-4 flex justify-between items-center backdrop-blur-sm sticky top-0 z-40 bg-ssx-cream"
-      >
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-blue-600 text-2xl"
-            >biotech</span
-          >
-          <span class="font-bold tracking-tight text-sm uppercase font-mono"
-            >SSX Conf.</span
-          >
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      background-blend-mode: overlay;
+    }
+
+    .blend-overlay {
+      mix-blend-mode: overlay;
+    }
+
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-ssx-cream text-ssx-navy font-display antialiased overflow-x-hidden selection:bg-ssx-blue selection:text-white">
+  <div
+    class="fixed inset-0 pointer-events-none opacity-[0.03] z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
+  </div>
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <svg class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] opacity-10 text-ssx-navy" viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M40,100 L70,80 L100,100 L130,80 L160,100 M70,80 L70,50 M130,80 L130,50 M100,100 L100,130" fill="none"
+        stroke="currentColor" stroke-width="0.5"></path>
+      <circle cx="40" cy="100" fill="currentColor" r="3"></circle>
+      <circle cx="70" cy="80" fill="currentColor" r="3"></circle>
+      <circle cx="100" cy="100" fill="currentColor" r="3"></circle>
+      <circle cx="130" cy="80" fill="currentColor" r="3"></circle>
+      <circle cx="160" cy="100" fill="currentColor" r="3"></circle>
+      <circle cx="70" cy="50" fill="currentColor" r="3"></circle>
+      <circle cx="130" cy="50" fill="currentColor" r="3"></circle>
+      <circle cx="100" cy="130" fill="currentColor" r="3"></circle>
+    </svg>
+    <svg class="absolute bottom-[-5%] left-[-5%] w-[800px] h-[800px] opacity-5 text-ssx-navy" viewBox="0 0 100 100">
+      <defs>
+        <pattern height="10" id="grid" patternUnits="userSpaceOnUse" width="10">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.2"></path>
+        </pattern>
+      </defs>
+      <rect fill="url(#grid)" height="100%" width="100%"></rect>
+    </svg>
+  </div>
+  <div class="relative z-10 flex flex-col min-h-screen">
+    <header
+      class="w-full border-b border-ssx-grid px-6 py-4 flex justify-between items-center backdrop-blur-sm sticky top-0 z-40 bg-ssx-cream">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-blue-600 text-2xl">biotech</span>
+        <span class="font-bold tracking-tight text-sm uppercase font-mono">SSX Conf.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <button class="hidden md:flex items-center gap-2 text-sm font-medium hover:text-blue-600 transition-colors">
+          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+          February 2026
+        </button>
+      </div>
+    </header>
+    <main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto">
+      <section class="w-full px-6 pt-12 pb-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 h-[200px] md:h-[280px] mb-4">
+          <div class="relative group overflow-hidden rounded col-span-1 md:col-span-2 bg-neutral-200">
+            <img alt="Black and white archival photo of microscope lenses and laboratory glassware"
+              class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              src="assets/images/full_group.webp" />
+            <div class="absolute inset-0 bg-ssx-navy/10 mix-blend-multiply"></div>
+          </div>
+          <div class="hidden lg:flex col-span-1 bg-blue-600 items-center justify-center rounded overflow-hidden">
+            <img alt="Portrait of scientist at work"
+              class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              src="assets/images/speaker_2.webp" />
+          </div>
+          <div class="relative group overflow-hidden rounded col-span-1 md:col-span-1 bg-neutral-200">
+            <img alt="Abstract high contrast brutalist architecture of Bengaluru university"
+              class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              src="assets/images/discussion.webp" />
+          </div>
+          <div class="relative group overflow-hidden rounded col-span-2 md:col-span-1 lg:col-span-1 bg-neutral-200">
+            <img alt="Detailed close up of scientific instruments and metal dials"
+              class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              data-location="Bengaluru" src="assets/images/speaker.webp" />
+          </div>
         </div>
+        <div class="relative flex flex-col items-start justify-end -mt-2">
+          <h1
+            class="font-serif font-light text-[18vw] md:text-[14vw] leading-[0.8] text-ssx-navy tracking-tighter mix-blend-hard-light opacity-90 select-none">
+            SSX 2026
+          </h1>
+        </div>
+      </section>
+      <div
+        class="w-full px-6 py-2 border-y border-ssx-grid flex flex-col md:flex-row justify-between items-start md:items-center font-mono text-xs uppercase tracking-widest gap-4">
         <div class="flex items-center gap-6">
-          <button
-            class="hidden md:flex items-center gap-2 text-sm font-medium hover:text-blue-600 transition-colors"
-          >
-            <span class="material-symbols-outlined text-[18px]"
-              >calendar_month</span
-            >
-            February 2026
-          </button>
+          <span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+            Feb 20—22, 2026</span>
+          <span>Bengaluru, IN</span>
         </div>
-      </header>
-      <main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto">
-        <section class="w-full px-6 pt-12 pb-6">
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 h-[200px] md:h-[280px] mb-4"
-          >
-            <div
-              class="relative group overflow-hidden rounded col-span-1 md:col-span-2 bg-neutral-200"
-            >
-              <img
-                alt="Black and white archival photo of microscope lenses and laboratory glassware"
-                class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                  src="assets/images/full_group.webp"
-              />
-              <div
-                class="absolute inset-0 bg-ssx-navy/10 mix-blend-multiply"
-              ></div>
-            </div>
-            <div
-              class="hidden lg:flex col-span-1 bg-blue-600 items-center justify-center rounded overflow-hidden"
-            >
-              <img
-                alt="Portrait of scientist at work"
-                class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                src="assets/images/speaker_2.webp"
-              />
-            </div>
-            <div
-              class="relative group overflow-hidden rounded col-span-1 md:col-span-1 bg-neutral-200"
-            >
-              <img
-                alt="Abstract high contrast brutalist architecture of Bengaluru university"
-                class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                src="assets/images/discussion.webp"
-              />
-            </div>
-            <div
-              class="relative group overflow-hidden rounded col-span-2 md:col-span-1 lg:col-span-1 bg-neutral-200"
-            >
-              <img
-                alt="Detailed close up of scientific instruments and metal dials"
-                class="w-full h-full object-cover grayscale-0 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                data-location="Bengaluru"
-                src="assets/images/speaker.webp"
-              />
+        <div class="hidden md:block">13.029° N 77.569° E</div>
+        <div>Ramaiah University of Applied Sciences</div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 w-full min-h-[600px] border-b border-ssx-grid">
+        <div class="lg:col-span-4 p-6 lg:p-10 border-r border-ssx-grid flex flex-col justify-between">
+          <div class="space-y-6">
+            <p class="text-sm font-mono text-gray-500 dark:text-gray-400 uppercase tracking-widest">
+              Manifesto 001
+            </p>
+            <h2 class="text-3xl font-display font-medium leading-tight">
+              New Approaches to
+              <span class="italic font-serif text-blue-600">navigate Complexities</span>
+              in Drug Discovery and Development
+            </h2>
+            <p class="text-ssx-slate font-light leading-relaxed text-sm md:text-base">
+              Join the world’s leading experts in Bengaluru for a symposium dedicated to new approaches to navigate
+              complexities in drug discovery and development. <br> SSX 2026 bridges the gap between innovative
+              preclinical science and the delivery of next-generation therapeutics.
+            </p>
+          </div>
+          <div class="mt-12 lg:mt-0 pt-8 border-t border-dashed border-ssx-grid">
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <span class="w-8 h-[1px] bg-ssx-navy"></span>
+              <span>Scroll for Index</span>
             </div>
           </div>
-          <div class="relative flex flex-col items-start justify-end -mt-2">
-            <h1
-              class="font-serif font-light text-[18vw] md:text-[14vw] leading-[0.8] text-ssx-navy tracking-tighter mix-blend-hard-light opacity-90 select-none"
-            >
-              SSX 2026
-            </h1>
-          </div>
-        </section>
-        <div
-          class="w-full px-6 py-2 border-y border-ssx-grid flex flex-col md:flex-row justify-between items-start md:items-center font-mono text-xs uppercase tracking-widest gap-4"
-        >
-          <div class="flex items-center gap-6">
-            <span class="flex items-center gap-2"
-              ><span
-                class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"
-              ></span>
-              Feb 20—22, 2026</span
-            >
-            <span>Bengaluru, IN</span>
-          </div>
-          <div class="hidden md:block">13.029° N 77.569° E</div>
-          <div>Ramaiah University of Applied Sciences</div>
         </div>
-        <div
-          class="grid grid-cols-1 lg:grid-cols-12 w-full min-h-[600px] border-b border-ssx-grid"
-        >
-          <div
-            class="lg:col-span-4 p-6 lg:p-10 border-r border-ssx-grid flex flex-col justify-between"
-          >
-            <div class="space-y-6">
-              <p
-                class="text-sm font-mono text-gray-500 dark:text-gray-400 uppercase tracking-widest"
-              >
-                Manifesto 001
-              </p>
-              <h2 class="text-3xl font-display font-medium leading-tight">
-                New Approaches to  
-                <span class="italic font-serif text-blue-600"
-                  >navigate Complexities</span
-                >
-                in Drug Discovery and Development
-              </h2>
-              <p
-                class="text-ssx-slate font-light leading-relaxed text-sm md:text-base"
-              >
-                Join the world’s leading experts in Bengaluru for a symposium dedicated to new approaches to navigate complexities in drug discovery and development. <br> SSX 2026 bridges the gap between innovative preclinical science and the delivery of next-generation therapeutics.
-              </p>
-            </div>
-            <div
-              class="mt-12 lg:mt-0 pt-8 border-t border-dashed border-ssx-grid"
-            >
-              <div class="flex items-center gap-4 text-sm font-medium">
-                <span
-                  class="w-8 h-[1px] bg-ssx-navy"
-                ></span>
-                <span>Scroll for Index</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:col-span-8 backdrop-blur-sm"
-          >
-            <ul
-              class="flex flex-col h-full divide-y divide-ssx-grid"
-            >
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="program.html"
-                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >01</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Program Schedule</span
-                    >
-                  </div>
+        <div class="lg:col-span-8 backdrop-blur-sm">
+          <ul class="flex flex-col h-full divide-y divide-ssx-grid">
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="program.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
                   <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-                <div
-                  class="hidden lg:block absolute top-0 right-[20%] w-[1px] h-full bg-ssx-grid pointer-events-none"
-                ></div>
-              </li>
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="speakers.html"                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >02</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Speakers</span
-                    >
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-                <div
-                  class="absolute right-32 top-1/2 -translate-y-1/2 w-24 h-32 bg-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded border border-white/20 overflow-hidden hidden lg:block rotate-3"
-                >
-                  <img
-                    class="w-full h-full object-cover grayscale"
-                    data-alt="Portrait of a male scientist speaker wearing glasses"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCygFd2wpBM6Np9uXW_iG7NM45Bqhjd0QaAU1S38PldAeR2jYKPeEECDcttv685I_EIZyHtwESKyw6rD7A_nKO9Se1KJuqPRf50Vb7xuL8vQ2WELfua5VsBW40EOSQK6AWqCPsFhsNUGS2dnyKvmBkuKguY64I3uyb79Zdu72UT3TvPEpsFXaaapqTc8cxCbuKgJrpbH1E6JkBh5W2Q2ln-InELzDdXbPQatt1w2DRZM15LEIg4Q1yx71s52RnyEnt6GXsSsGvmy1zC"
-                  />
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">01</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Program Schedule</span>
                 </div>
-              </li>
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="otw.html"
-                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >03</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Abstract Book</span
-                    >
-                  </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+              <div class="hidden lg:block absolute top-0 right-[20%] w-[1px] h-full bg-ssx-grid pointer-events-none">
+              </div>
+            </li>
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="speakers.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
                   <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-              </li>
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="otw.html"
-                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >04</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Event Photos</span
-                    >
-                  </div>
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">02</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Speakers</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+              <div
+                class="absolute right-32 top-1/2 -translate-y-1/2 w-24 h-32 bg-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded border border-white/20 overflow-hidden hidden lg:block rotate-3">
+                <img class="w-full h-full object-cover grayscale"
+                  data-alt="Portrait of a male scientist speaker wearing glasses"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCygFd2wpBM6Np9uXW_iG7NM45Bqhjd0QaAU1S38PldAeR2jYKPeEECDcttv685I_EIZyHtwESKyw6rD7A_nKO9Se1KJuqPRf50Vb7xuL8vQ2WELfua5VsBW40EOSQK6AWqCPsFhsNUGS2dnyKvmBkuKguY64I3uyb79Zdu72UT3TvPEpsFXaaapqTc8cxCbuKgJrpbH1E6JkBh5W2Q2ln-InELzDdXbPQatt1w2DRZM15LEIg4Q1yx71s52RnyEnt6GXsSsGvmy1zC" />
+              </div>
+            </li>
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="otw.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
                   <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-              </li>
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="venues.html"
-                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >05</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Venues</span
-                    >
-                  </div>
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">03</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Abstract Book</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+            </li>
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="otw.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
                   <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-              </li>
-              <li class="group relative flex-1">
-                <a
-                  class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  href="contact.html"
-                >
-                  <div class="flex items-baseline gap-6 lg:gap-12">
-                    <span
-                      class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white"
-                      >06</span
-                    >
-                    <span
-                      class="text-2xl lg:text-4xl font-display font-bold tracking-tight"
-                      >Contact</span
-                    >
-                  </div>
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">04</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Event Photos</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+            </li>
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="venues.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
                   <span
-                    class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white"
-                    >arrow_outward</span
-                  >
-                </a>
-              </li>
-            </ul>
-          </div>
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">05</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Venues</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+            </li>
+            <li class="group relative flex-1">
+              <a class="flex items-center justify-between w-full h-full px-6 lg:px-10 py-6 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                href="contact.html">
+                <div class="flex items-baseline gap-6 lg:gap-12">
+                  <span
+                    class="font-mono text-sm opacity-50 group-hover:opacity-100 text-blue-600 group-hover:text-white">06</span>
+                  <span class="text-2xl lg:text-4xl font-display font-bold tracking-tight">Contact</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-2xl transform group-hover:rotate-45 transition-transform duration-300 text-blue-600 group-hover:text-white">arrow_outward</span>
+              </a>
+            </li>
+          </ul>
         </div>
-      </main>
-      <footer
-        class="w-full border-t border-ssx-grid bg-ssx-navy text-ssx-cream py-6 px-6"
-      >
-        <div class="max-w-[1440px] mx-auto flex justify-center items-center">
-          <p class="font-mono text-xs uppercase tracking-widest text-center">
-            Designed and Developed by
-            <a
-              class="text-ssx-cream hover:text-blue-800 transition-colors underline underline-offset-4"
-              href="https://www.linkedin.com/in/leroy-alvares/"
-              >Leroy Alvares</a
-            >
-            | SSX - India
-          </p>
-        </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+    <footer class="w-full border-t border-ssx-grid bg-ssx-navy text-ssx-cream py-6 px-6">
+      <div class="max-w-[1440px] mx-auto flex justify-center items-center">
+        <p class="font-mono text-xs uppercase tracking-widest text-center">
+          Designed and Developed by
+          <a class="text-ssx-cream hover:text-blue-800 transition-colors underline underline-offset-4"
+            href="https://www.linkedin.com/in/leroy-alvares/">Leroy Alvares</a>
+          | SSX - India
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
